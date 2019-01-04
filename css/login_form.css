@@ -1,0 +1,94 @@
+.abcd{
+    //border-color: black;
+    border-width: 1px;
+    position: relative;
+    top: 180px;
+    left: 80px;
+    width: 1200px;
+    height: 600px;
+}
+.abc1{
+    float: left;
+    //border-color: black;
+    border-width: 1px;
+    width: 30%;
+    height: 880px;
+}
+.abc2{
+    float: left;
+    //border-color: black;
+    border-width: 1px;
+    background: #F5F5F5;
+    width: 69.7%;
+    height: 880px;
+}
+.def{
+    display: inline-block;
+    //border-color: blue;
+    width: 98%;
+}
+.ghi{
+    float: left;
+    //border-color: black;
+    border-width: 1px;
+    width: 700px;
+    height: 70px;
+}
+.ghi1{
+    float: left;
+    //border-color: black;
+    border-width: 1px;
+    width: 300px;
+    height: 70px;
+}
+input{
+    width: 600px;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+.b{
+    color: white;
+    background: red;
+    position: relative;
+    left: 300px;
+    width: 618px;
+    height: 50px;
+    font-size: 25px;
+}
+.logo{
+    position: relative;
+    left: 150px;
+    width: 300px;
+    bottom: 50px;
+    color: blue;
+    font-size: 100px;
+}
+.para1{
+    border-color: black;
+    position: relative;
+    left: 150px;
+    bottom: 100px;
+    width: 290px;
+    height: 200px;
+    font-size: 55px;
+}
+p{
+    font-size:25px;
+}
+.a1{
+    font-size: 25px;
+    position: relative;
+    left: 150px;
+    bottom: 130px;
+    color: red;
+}
+.a2{
+    font-size: 20px;
+    position: relative;
+    left: 490px;
+    color: red;
+}
+
+
