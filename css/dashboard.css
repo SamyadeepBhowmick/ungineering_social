@@ -105,9 +105,10 @@
 }
 .box4{
     border: solid 2px #DC143C;
-    width: 100px;
+    display: border-box;
+    width: 120px;
+    height: 40px;
     background-color: #DC143C;
-    height: 30px;
     margin-left: 200px;
     margin-top: 10px;
     color: #FFFFFF;

@@ -1,7 +1,7 @@
 <?php
     $hostname="localhost";
     $username="root";
-    $db_password="123samya";
+    $db_password="supriya1234";
     $db_name="social_media";
     $conn=mysqli_connect($hostname,$username,$db_password,$db_name);
     if(!$conn){
