@@ -1,0 +1,18 @@
+.bound{
+    box-sizing: border-box;
+    border: solid 2px #FF0000;
+    width: 1000px;
+    height:650px;  
+}
+.main{
+    box-sizing: border-box;
+    border: solid 2px #FFFFFF;
+    width: 250px;
+    height: 40px;
+    //float: left;
+    margin-top: 10px;
+    margin-left:400px;;
+    font-size: 25px;
+    font-weight: bold;
+    color: red; 
+}

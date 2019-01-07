@@ -3,7 +3,7 @@
     
     $hostname="localhost";
     $username="root";
-    $db_password="123samya";
+    $db_password="supriya1234";
     $db_name="social_media";
     
     $conn=mysqli_connect($hostname,$username,$db_password,$db_name);
@@ -23,14 +23,14 @@
     
     if ($row=mysqli_fetch_array($result)) {
         //echo "Hello"."<br/>";
-        echo $row['name'] . "<br/>";
-        $_SESSION['id']=$row['id'];
+        echo $row['name'] ."<br/>";
+        $_SESSION['user_id']=$row['user_id'];
         //$_SESSION['name']=$row['name'];
         //setcookie("id",$row['id'],3600,"/");
         //setcookie("name",$row['name'],3600,"/");
         ?>
     
-        <a href="dashboard.php">Click here to Continue</a>
+        <a href="dashboard.php">My Dashboard</a>
         
         <!--<a href="dashboard.php? name=<?php echo $row['name'];?>">Click here to Continue</a>
         <form action="dashboard.php" method="get">
