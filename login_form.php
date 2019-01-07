@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Login Page</title>
-        <link rel="stylesheet" href="/social_media/css/login_form.css"/>
+        <link rel="stylesheet" href="login_form.css"/>
     </head>
     <body>
         <div class="abc1">
