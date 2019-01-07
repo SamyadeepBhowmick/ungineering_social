@@ -30,7 +30,7 @@
         //setcookie("name",$row['name'],3600,"/");
         ?>
     
-        <a href="dashboard.php">My Dashboard</a>
+        <a href="dashboard2.php">My Dashboard</a>
         
         <!--<a href="dashboard.php? name=<?php echo $row['name'];?>">Click here to Continue</a>
         <form action="dashboard.php" method="get">

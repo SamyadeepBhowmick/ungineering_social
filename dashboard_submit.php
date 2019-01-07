@@ -9,20 +9,23 @@
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
-    $id=$_SESSION['user_id']; echo $id; 
-    $college=$_POST['college']; echo $college;
+    $id=$_SESSION['user_id']; //echo $id; 
+    $college=$_POST['college']; //echo $college;
     $phone_no=$_POST['phone_no']; //echo $phone_no;
-    
+    $name=$_POST['name'];
+    $password=$_POST['password'];
+    $email=$_POST['email'];
     $sql = "UPDATE users
-      SET college='$college',phone_no= '$phone_no'
-      WHERE user_id= $id";;
+      SET college='$college',phone_no= '$phone_no',name='$name',email= '$email' ,password='$password'
+      WHERE user_id= $id";// echo $sql;
     $result = mysqli_query($conn, $sql);
     if (!$result) {
         die("Error: " . $sql . "<br>" . mysqli_error($conn));
     }    	
-    echo"update sucessfull";
+    echo"update sucessful";
     mysqli_close($conn);
 ?>  
+<a href="dashboard2.php">Back</a>
 
 
 

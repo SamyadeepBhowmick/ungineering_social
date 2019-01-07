@@ -17,7 +17,7 @@
     echo "registration successful";
     mysqli_close($conn);
 ?>
-
+<a href="login_form.php">Back</a>
 
 
 
