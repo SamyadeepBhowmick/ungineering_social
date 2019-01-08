@@ -54,11 +54,10 @@
 .ab1{
   display: block;
   background-color: white; 
-  //border: solid 1px red;  
+  //border: solid 1px white;  
   width: 65.3%; 
   margin: 0px 00px 10px 230px;
-  
-  height: 100px;
+  height: 95px;
 }
 h1{
     font-size: 22px;
