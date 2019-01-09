@@ -3,13 +3,17 @@
     
     $hostname="localhost";
     $username="root";
-    $db_password="supriya1234";
+    $db_password="123samya";
     $db_name="social_media";
     
+    $response = array();
     $conn=mysqli_connect($hostname,$username,$db_password,$db_name);
     
     if(!$conn){
-        die("connection failed:".mysqli_connect_error());
+        $response['success'] = false;
+        $response['message'] = "Connection failed: " . mysqli_connect_error();
+        echo json_encode($response);
+        exit();
     }
     
     $email=$_POST['email'];
@@ -18,30 +22,23 @@
     $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
     $result = mysqli_query($conn, $sql);
     if (!$result) {
-        die("Error: " . $sql . "<br>" . mysqli_error($conn));
+        $response['success'] = false;
+        $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo json_encode($response);
+        exit();
     }
     
     if ($row=mysqli_fetch_array($result)) {
-        //echo "Hello"."<br/>";
-        echo $row['name'] ."<br/>";
-        $_SESSION['user_id']=$row['user_id'];
-        //$_SESSION['name']=$row['name'];
-        //setcookie("id",$row['id'],3600,"/");
-        //setcookie("name",$row['name'],3600,"/");
-        ?>
-    
-        <a href="dashboard2.php">My Dashboard</a>
+        $response['success'] = true;
+        $response['message'] = "Hello " . $row['name'];
+        $_SESSION['id']=$row['id'];
         
-        <!--<a href="dashboard.php? name=<?php echo $row['name'];?>">Click here to Continue</a>
-        <form action="dashboard.php" method="get">
-            <input type="hidden" name="name" value="<?php echo $row['name']?>"/>
-            <input type="submit" value="click here"/>
-        </form>-->
-        <?php
     }
     else{
-        echo "login Failed";
+        $response['success'] = false;
+        $response['message'] = "Login failed";
     }   	
-
+    
+    echo json_encode($response);
     mysqli_close($conn);
 ?>
