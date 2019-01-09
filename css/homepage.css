@@ -3,7 +3,7 @@
 }
 .main{
     display: block;
-    border: solid 3px red;
+    //border: solid 3px;
     height: 2800px;
     background-color: #F3F2F6;  
 }
@@ -12,6 +12,7 @@
     height: 110px;
     position: static;
     background-color:white; 
+    //border: solid 1px red;
 }
 .b{
     display: block;
@@ -46,6 +47,39 @@
     border: solid 1px red;
     padding:5px 18px 5px 18px;
 }
-h1{
-    font-size: 22px;
+.dashboard{
+    color: red;
+    border: solid white 1px;
+    background-color: white;
+    margin: 70px 15px 5px 720px;
+    border: solid 1px red;
+}
+.logout{
+    color: red;
+    border: solid red 1px;
+    background-color: white;
+}
+.ab{
+     margin: 5px 00px 5px 230px;
+     padding-top: 5px;
+     font-weight: bold;
+     font-size: 30px;
+     color:#747374;
+}
+.ab1{
+  display: block;
+  background-color: white; 
+  //border: solid 1px white;  
+  width: 65.3%; 
+  margin: 0px 00px 10px 230px;
+  height: 95px;
+}
+.submit{
+    color:white;
+    border: solid red 1px;
+    background-color:red;
+    margin: 3px 00px 3px 972px;
+    padding:4px 18px 4px 18px;
+    font-size: bold;
+    //font-size: 22px;
 }

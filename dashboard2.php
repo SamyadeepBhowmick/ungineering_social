@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="account">
-                    <form method="post" action="dashboard_submit.php">
+                    <form method="post" id="dashboard2" action="dashboard_submit.php">
                         <div class="child22">
                             Name
                         </div>
@@ -133,5 +133,7 @@
                 </div>
             </div>
         </div>
+         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+         <script type="text/javascript" src="js/dashboard.js"></script>
     </body>
 </html>
