@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Login Page</title>
-        <link rel="stylesheet" href="login_form.css"/>
+        <link rel="stylesheet" href="css/login_form.css"/>
     </head>
     <body>
         <div class="abc1">
@@ -11,7 +11,7 @@
             <a href="register_form.php" class="a1">New User Create Account</a>
         </div>
         <div class="abc2">
-            <form method="post" action="login_submit.php" class="abcd">
+            <form id="login_form" method="post" action="login_submit.php" class="abcd">
                 
                 <h1>Log-in</h1>
                 
@@ -37,6 +37,7 @@
 
             </form>
         </div>
-        <script type="text/javascript" src="js/login_form.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
     </body>
 </html>

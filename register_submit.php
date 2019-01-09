@@ -1,38 +1,29 @@
 <?php
     $hostname="localhost";
     $username="root";
-    $db_password="supriya1234";
+    $db_password="123samya";
     $db_name="social_media";
+    
+    $response = array();
     $conn=mysqli_connect($hostname,$username,$db_password,$db_name);
     if(!$conn){
-        die("connection failed:".mysqli_connect_error());
+        $response['success'] = false;
+        $response['message'] = "Connection failed: " . mysqli_connect_error();
+        echo json_encode($response);
+        exit();
     }
     $name=$_POST['name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
     $sql="INSERT INTO users(name,email,password)VALUES('$name','$email','$password')";
     if(!mysqli_query($conn,$sql)){
-        die("Error:".$sql."<br/>".mysql_error($conn));
+        $response['success'] = false;
+        $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
+        echo json_encode($response);
+        exit();
     }
-    echo "registration successful";
+    $response['success'] = true;
+    $response['message'] = "Registration successful";
+    echo json_encode($response);
     mysqli_close($conn);
-?>
-<a href="login_form.php">Back</a>
-
-
-
-
-
-
-
-
-<?php
-    /*$name=$_POST['name'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $conpassword=$_POST['confirm password'];
-    echo $name;
-    echo $email;
-    echo $password;
-    echo $conpassword;*/
 ?>
