@@ -97,9 +97,6 @@ input{
     float: left;
     color: white;
     background: red;
-    position: relative;
-    left: 300px;
-    width: 618px;
     height: 50px;
     font-size: 25px;
     border-color: red;
@@ -131,16 +128,10 @@ input{
 }
 .a1{
     font-size: 25px;
-    position: relative;
-    left: 150px;
-    bottom: 130px;
     color: red;
 }
 .a2{
-    font-size: 20px;
-    position: relative;
-    left: 510px;
+    font-size: 25px;
     color: red;
 }
-
 

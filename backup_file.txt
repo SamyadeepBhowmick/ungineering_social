@@ -25,3 +25,12 @@ INSERT INTO users(user_id,name,email,password,college,phone_no)
     VALUES(1,"Supriya","abc@gmail.com","supriya","Heritage Institute Of Technology","1459875632");
 INSERT INTO statuss(status_id,userid,date,time,status)
     VALUES(1,1,'2019-01-04','12:40:30',"Sachin Ramesh Tendulkar born on 24 April 1973 is a former Indian international cricketer and a former capptain of the Indian national team, regarded as the greatest batsman of all time. He is the highest run scorer of all time in International cricket.");
+    
+    
+RENAME TABLE statuss TO statuses;
+
+ALTER TABLE statuses  
+CHANGE COLUMN status_id id int not null auto_increment;  
+
+ALTER TABLE users  
+CHANGE COLUMN user_id id int not null auto_increment;  

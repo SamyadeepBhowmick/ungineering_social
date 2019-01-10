@@ -27,22 +27,3 @@
     echo json_encode($response);
     mysqli_close($conn);
 ?>
-<a href="login_form.php">Back</a>
-
-
-
-
-
-
-
-
-<?php
-    /*$name=$_POST['name'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $conpassword=$_POST['confirm password'];
-    echo $name;
-    echo $email;
-    echo $password;
-    echo $conpassword;*/
-?>

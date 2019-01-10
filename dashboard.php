@@ -16,7 +16,7 @@
         $college=$_POST['college']; //echo $college;
         $phone_no=$_POST['phone_no']; //echo $phone_no;
    
-        $sql = "SELECT * FROM users WHERE user_id=$id";
+        $sql = "SELECT * FROM users WHERE id=$id";
         $result = mysqli_query($conn, $sql);
         if (!$result) {
             die("Error: " . $sql . "<br>" . mysqli_error($conn));
@@ -119,7 +119,7 @@
                                 die("Connection failed: " . mysqli_connect_error());
                             }
                           
-                            $sql = "SELECT * FROM statuss WHERE userid=$id";
+                            $sql = "SELECT * FROM statuses WHERE userid=$id";
                             $result = mysqli_query($conn, $sql);
                             if (!$result) {
                                 die("Error: " . $sql . "<br>" . mysqli_error($conn));

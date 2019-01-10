@@ -1,5 +1,7 @@
 <?php
-    session_start();    
+    session_start();
+    
+    
     
     $hostname="localhost";
     $username="root";
@@ -31,7 +33,7 @@
     if ($row=mysqli_fetch_array($result)) {
         $response['success'] = true;
         $response['message'] = "Hello " . $row['name'];
-        $_SESSION['user_id']=$row['user_id'];
+        $_SESSION['user_id']=$row['id'];
         
     }
     else{

@@ -23,7 +23,7 @@
     
     $sql = "UPDATE users
       SET college='$college',phone_no= '$phone_no',name='$name',email= '$email' ,password='$password'
-      WHERE user_id= $id";// echo $sql;
+      WHERE id= $id";// echo $sql;
       
     $result = mysqli_query($conn, $sql);
     if (!$result) {
