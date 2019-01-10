@@ -31,7 +31,7 @@
     if ($row=mysqli_fetch_array($result)) {
         $response['success'] = true;
         $response['message'] = "Hello " . $row['name'];
-        $_SESSION['id']=$row['id'];
+        $_SESSION['user_id']=$row['id'];
         
     }
     else{
