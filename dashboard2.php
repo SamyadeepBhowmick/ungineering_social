@@ -40,7 +40,7 @@
             <div class="main1">
                 <div class="child1">
                     <div class="img">
-                        <img src="sample.png" width="180" height="100">
+                        <p><b class="logo">S</b><span STYLE="color: blue; font-size: 40px">ocialite</span></p>
                     </div>
                 </div>
                 <div class ="child1">
@@ -49,7 +49,9 @@
                 </div>
                 <div class ="child1">
                     <div class="upper1">
-                        <a href="login_form.php" >LogOut</a>
+                       <!-- <a href="login_form.php" type="button">LogOut</a>
+                        <button type="button">LogOut</button>-->
+                        <button  class="logout" onclick="window.location.href='login_form.php'">LogOut</button>
                     </div>
                 </div>
             </div>
@@ -117,7 +119,7 @@
                                 die("Connection failed: " . mysqli_connect_error());
                             }
                           
-                            $sql = "SELECT * FROM statuss WHERE userid='$id'";
+                            $sql = "SELECT * FROM statuss WHERE userid=$id";
                             $result = mysqli_query($conn, $sql);
                             if (!$result) {
                                 die("Error: " . $sql . "<br>" . mysqli_error($conn));
