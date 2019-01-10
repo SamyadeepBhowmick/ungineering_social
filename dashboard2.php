@@ -117,7 +117,7 @@
                                 die("Connection failed: " . mysqli_connect_error());
                             }
                           
-                            $sql = "SELECT * FROM statuss WHERE userid=$id";
+                            $sql = "SELECT * FROM statuss WHERE userid='$id'";
                             $result = mysqli_query($conn, $sql);
                             if (!$result) {
                                 die("Error: " . $sql . "<br>" . mysqli_error($conn));

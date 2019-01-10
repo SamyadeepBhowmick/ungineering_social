@@ -31,7 +31,11 @@
     if ($row=mysqli_fetch_array($result)) {
         $response['success'] = true;
         $response['message'] = "Hello " . $row['name'];
+<<<<<<< HEAD
+        $_SESSION['user_id']=$row['id'];
+=======
         $_SESSION['user_id']=$row['user_id'];
+>>>>>>> 3d692166ab4f6f04898e292d04ca3b037a8cc467
         
     }
     else{
