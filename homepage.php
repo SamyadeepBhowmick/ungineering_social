@@ -22,7 +22,7 @@
                         ?>
 
                         <a href="dashboard.php"><button class="dashboard">My Dashboard</button></a>
-                        <a href=""><button class="logout">Logout</button> </a> 
+                        <a href="logout.php"><button class="logout">Logout</button> </a> 
                         <?php
                     }
                     ?>    
@@ -30,21 +30,21 @@
             </div>
             <div class="b">
                 <?php
-                if (isset($_SESSION['user_id'])) {
+                    if (isset($_SESSION['user_id'])) {
                     //$id= $_SESSION['user_id']; 
-                    ?>
-                    <div class="ab">Write something here </div>
-                    <form method="post" action="loggedin_submit.php">
-                        <div class="ab1">
-                            <p>
-                                <textarea class="abcd" rows = "6" cols = "101" id="status" name="status"></textarea>
-                            </p>
-                        </div>
-                        <input class="submit" type="submit" name="submit" value="Submit"/>
-                        <hr></hr>
-                    </form>
-                    <?php
-                }
+                ?>
+                <div class="ab">Write something here </div>
+                    <form method="post" action="homepage_submit.php" id="loggedin_submit">
+                <div class="ab1">
+                    <p>
+                        <textarea class="abcd" rows = "6" cols = "101"  name="status"></textarea>
+                    </p>
+                </div>
+                    <input class="submit" type="submit" name="submit" value="Submit"/>
+                    <hr></hr>
+                </form>
+                <?php
+                    }
                 ?>
                 <?php
                 $hostname = "localhost";
@@ -57,15 +57,15 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 $sql = "SELECT 
-                        statuss.status,users.name
+                        statuses.status,statuses.date,statuses.time,users.name
                     FROM
-                        statuss
+                        statuses
                     INNER JOIN 
                         users
                     ON
-                        statuss.userid=users.user_id
+                        statuses.userid=users.id
                     ORDER BY 
-                        statuss.date,statuss.time DESC";
+                        statuses.id DESC";
                 $result = mysqli_query($conn, $sql);
                 if (!$result) {
                     die("Error: " . $sql . "<br>" . mysqli_error($conn));
@@ -85,7 +85,8 @@
                 ?>                                  
             </div>
         </div>
-        <script type="text/javascript" src="js/homepage.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/homepage_submit.js"></script>  
     </body>
 </html>
 

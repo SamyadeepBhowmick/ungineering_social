@@ -40,7 +40,7 @@ var login_success = function (data) {
 
     if (data.success) {
         alert(data.message);
-        window.location.href = "dashboard.php";
+        window.location.href = "homepage.php";
     } else {
         alert(data.message);
     }
