@@ -16,7 +16,7 @@
                     if (!isset($_SESSION['user_id'])) {
                         ?>
                         <a href="login_form.php"><button class="login" >Login</button></a>
-                        <a href="register_form.php"><button class="new user" >New user</button></a>
+                        <a href="register_form.php"><button class="new user" >New_user</button></a>
                         <?php
                     } else {
                         ?>
