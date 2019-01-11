@@ -16,7 +16,7 @@
                     if (!isset($_SESSION['user_id'])) {
                         ?>
                         <a href="login_form.php"><button class="login" >Login</button></a>
-                        <a href="register_form.php"><button class="new user" >New user</button></a>
+                        <a href="register_form.php"><button class="new_user" >New user</button></a>
                         <?php
                     } else {
                         ?>
@@ -49,7 +49,7 @@
                 <?php
                 $hostname = "localhost";
                 $username = "root";
-                $db_password = "amansagar";
+                $db_password = "supriya1234";
                 $db_name = "social_media";
 
                 $conn = mysqli_connect($hostname, $username, $db_password, $db_name);
