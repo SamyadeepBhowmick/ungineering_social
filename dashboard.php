@@ -126,7 +126,7 @@
                             }
                             
                             while ($row=mysqli_fetch_array($result)) {
-                                echo $row['date']. " " .$row['time']. " ". $row['status'];
+                                echo $row['date']. " " .$row['time']. " "?></br></br><?php echo $row['status'];
                             }    	
 
                             mysqli_close($conn);
