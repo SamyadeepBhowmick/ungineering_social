@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    $('#dashboard2').submit(function() {
+    $('#dashboard').submit(function() {
         var url = "dashboard_submit.php";
-        var data = $('#dashboard2').serialize();
+        var data = $('#dashboard').serialize();
         $.ajax(url, {
             data: data,
             success: registration_success,
@@ -16,7 +16,7 @@ var registration_success = function (data) {
 
     if (data.success) {
         alert(data.message);
-        window.location.href = "dashboard2.php"; 
+        window.location.href = "dashboard.php"; 
     } else {
         alert(data.message);
     }

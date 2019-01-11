@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="account">
-                    <form method="post" id="dashboard2" action="dashboard_submit.php">
+                    <form method="post" id="dashboard" action="dashboard_submit.php">
                         <div class="child22">
                             Name
                         </div>
