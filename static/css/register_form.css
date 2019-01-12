@@ -1,0 +1,113 @@
+.abcd{
+    border-color: black;
+    border-width: 1px;
+    position: relative;
+    top: 180px;
+    left: 10%;
+    width: 80%;
+    height: 600px;
+}
+.ab1{
+    display: block;
+    border-color: black;
+    border-width: 1px;
+    position: relative; 
+    left: 20%;
+    height: 20%;
+    font-size: 30px;
+}
+.ab2{
+    display: block;
+    border-color: black;
+    border-width: 1px;
+    position: relative;
+    left: 20%;
+    height: 30%;
+    font-size: 30px;
+}
+.ab3{
+    display: block;
+    border-color: black;
+    border-width: 1px;
+    position: relative;
+    left: 20%;
+    height: 30%;
+    font-size: 30px;
+}
+.abc1{
+    float: left;
+    border-width: 1px;
+    width: 30%;
+    height: 880px;
+}
+.abc2{
+    float: left;
+    border-width: 1px;
+    background: #F5F5F5;
+    width: 69.7%;
+    height: 880px;
+}
+.def{
+    display: inline-block;
+    width: 98%; 
+}
+.ghi{
+    float: right;
+    border-width: 1px;
+    width: 69%;
+    height: 70px;
+    text-align: center;
+}
+.ghi1{
+    float: left;
+    border-width: 1px;
+    width: 29%;
+    height: 70px;
+    font-size: 25px;
+}
+input{
+    width: 99%;
+    height: 40px;
+    position: relative;
+    top: 10px;
+    font-size: 25px;
+}
+.button{
+    float: left;
+    color: white;
+    background: red;
+    height: 50px;
+    font-size: 25px;
+    border-color: red;
+}
+.logo{
+    position: relative;
+    bottom: 30%;
+    border-color: black;
+    border-width: 1px;
+    height: 50%;
+    font-size: 100px;
+}
+.para1{
+    position: relative;
+    bottom: 20%;
+    border-color: blue;
+    border-width: 1px;
+    height: 70%;
+    font-size: 50px;
+}
+.tag{
+    position: relative;
+    bottom: 60%;
+    border-color: blue;
+    border-width: 1px;
+}
+.a1{
+    font-size: 25px;
+    color: red;
+}
+.a2{
+    font-size: 25px;
+    color: red;
+}
+
