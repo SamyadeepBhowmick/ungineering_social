@@ -18,33 +18,21 @@ class Login extends CI_Controller {
     }
 
     public function register_submit() {
-        $hostname = "localhost";
-        $username = "root";
-        $db_password = "123samya";
-        $db_name = "social_media";
+
 
         $response = array();
-        $conn = mysqli_connect($hostname, $username, $db_password, $db_name);
-        if (!$conn) {
-            $response['success'] = false;
-            $response['message'] = "Connection failed: " . mysqli_connect_error();
-            echo json_encode($response);
-            exit();
-        }
+
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $sql = "INSERT INTO users(name,email,password)VALUES('$name','$email','$password')";
-        if (!mysqli_query($conn, $sql)) {
-            $response['success'] = false;
-            $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
-            echo json_encode($response);
-            exit();
-        }
+        $data = array('name' => $name, 'email' => $email, 'password' => $password);
+
+        $this->load->model('user');
+        $this->user->insert_data_in_table($data);
+
         $response['success'] = true;
         $response['message'] = "Registration successful";
         echo json_encode($response);
-        mysqli_close($conn);
     }
 
     public function login_submit() {
@@ -52,44 +40,29 @@ class Login extends CI_Controller {
 
 
 
-        $hostname = "localhost";
-        $username = "root";
-        $db_password = "123samya";
-        $db_name = "social_media";
-
         $response = array();
-        $conn = mysqli_connect($hostname, $username, $db_password, $db_name);
+   
 
-        if (!$conn) {
-            $response['success'] = false;
-            $response['message'] = "Connection failed: " . mysqli_connect_error();
-            echo json_encode($response);
-            exit();
-        }
 
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-        $result = mysqli_query($conn, $sql);
-        if (!$result) {
-            $response['success'] = false;
-            $response['message'] = "Error: " . $sql . "<br>" . mysqli_error($conn);
-            echo json_encode($response);
-            exit();
-        }
+        $this->load->model('user');
+        $result = $this->user->get_data_from_table($email, $password);
 
-        if ($row = mysqli_fetch_array($result)) {
-            $response['success'] = true;
-            $response['message'] = "Hello " . $row['name'];
-            $_SESSION['user_id'] = $row['id'];
-        } else {
-            $response['success'] = false;
-            $response['message'] = "Login failed";
+        foreach ($result as $row) {
+            if ($row->email == $email && $row->password == $password) {
+                $_SESSION['user_id'] = $row->id;
+                $response['success'] = true;
+                $response['message'] = "Hello " . $row->name;
+            } 
+            else{
+                $response['success'] = false;
+                $response['message'] = "Login failed";
+            }
         }
 
         echo json_encode($response);
-        mysqli_close($conn);
     }
 
     public function logout() {
