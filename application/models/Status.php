@@ -18,6 +18,15 @@ class Status extends CI_Model {
         $query = $this->db->get('statuses');
         return $query->result();
     }
+    public function select_all_status($id) {
+
+        $query = $this->db->select('*')->from('statuses')
+                ->group_start()
+                ->where('userid', $id)
+                ->group_end()
+                ->get();
+        return $query->result_array();
+    }
 
 }
 

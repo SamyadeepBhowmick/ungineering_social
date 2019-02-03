@@ -26,6 +26,34 @@ class User extends CI_Model {
         return $query->result();
     }
 
+    public function update_data() {
+        $data = array(
+            'college' => $college,
+            'phone_no' => $phone_no,
+            'name' => $name,
+            'email' => $email,
+            'password' => $password
+        );
+
+        $this->db->where('id', $id);
+        $updated_data = $this->db->update('users', $data);
+        return $updated_data;
+    }
+   
+
+    public function select_all_data($id) {
+
+        $query = $this->db->select('*')->from('users')
+                ->group_start()
+                ->where('id', $id)
+                ->group_end()
+                ->get();
+        return $query->result_array();
+    }
+
+    public function fetch_data() {
+
+        return($this->db->where('id', $id));
+    }
+
 }
-
-
